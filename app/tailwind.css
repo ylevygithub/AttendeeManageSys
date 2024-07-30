@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes wave {
+  0% {
+    background-position: 0 0, 310px 0, 620px 0;
+  }
+  100% {
+    background-position: -310px 0, 0 0, 310px 0;
+  }
+}
+
+.beach-waves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.prod.website-files.com/61eb3f79cfe8dd4bf6350818/65a15129dd5efd8c5fea6aec_rktvufyrv5geyfcwocoy%20(1)-p-500.webp') repeat-x,
+              url('https://cdn.prod.website-files.com/61eb3f79cfe8dd4bf6350818/65a1520cfbbb83449950582d_n1pd0t30omfxswqzzx0p-p-500.webp') repeat-x,
+              url('https://cdn.prod.website-files.com/61eb3f79cfe8dd4bf6350818/65a150d4e2ed6a66375adf12_al1lfphow0ofk30iroee-p-500.webp') repeat-x;
+  background-size: 310px, 620px, 930px; /* Ensure each image has the same width for consistency */
+  background-position: 0 0, 310px 0, 620px 0; /* Align images properly */
+  image-rendering: pixelated; /* Apply pixelated effect */
+  animation: wave 20s linear infinite;
+  z-index: -1;
+}

@@ -1,0 +1,36 @@
+/*
+  This configuration helps to set up a TypeScript project with modern JavaScript features, strict type-checking, and simplified module resolution.
+
+  lib: Includes the DOM and latest ECMAScript libraries.
+  module: Uses the latest ECMAScript module syntax.
+  target: Targets the latest ECMAScript standard.
+  jsx: Uses the new JSX transform for React.
+  strict: Enables strict type-checking options.
+  moduleResolution: Uses Node.js module resolution strategy.
+  esModuleInterop: Ensures compatibility between CommonJS and ES modules.
+  skipLibCheck: Skips type checking for declaration files.
+  forceConsistentCasingInFileNames: Enforces consistent casing in file names.
+  baseUrl: Sets the base URL for module resolution.
+  paths: Sets up path mapping for easier module resolution.
+  include: Specifies which files to include in the project.
+  exclude: Specifies which files to exclude from the project.
+*/
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    }
+  },
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
